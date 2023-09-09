@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 const Input = ({ label, labelClass, name, onChange, value }) => {
   return (
@@ -15,6 +15,14 @@ const Input = ({ label, labelClass, name, onChange, value }) => {
       />
     </div>
   );
+};
+
+Input.propTypes = {
+  label: PropTypes.string,
+  labelClass: PropTypes.string,
+  name: PropTypes.string,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
 };
 
 export default Input;
